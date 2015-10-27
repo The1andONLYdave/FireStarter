@@ -6,6 +6,8 @@ import android.preference.PreferenceManager;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.dlka.firestarter.R;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;

@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.FireStarterUpdater;
 import com.dlka.firestarter.tools.SettingsProvider;
 import com.dlka.firestarter.tools.Updater;

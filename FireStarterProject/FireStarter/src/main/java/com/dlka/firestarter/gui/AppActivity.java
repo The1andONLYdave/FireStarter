@@ -17,6 +17,7 @@ import android.widget.Toast;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.AppInfo;
 import com.dlka.firestarter.tools.AppStarter;
 import com.dlka.firestarter.tools.FireStarterUpdater;

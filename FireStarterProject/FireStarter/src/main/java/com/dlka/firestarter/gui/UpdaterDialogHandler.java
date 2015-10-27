@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.FireStarterUpdater;
 import com.dlka.firestarter.tools.Updater;
 

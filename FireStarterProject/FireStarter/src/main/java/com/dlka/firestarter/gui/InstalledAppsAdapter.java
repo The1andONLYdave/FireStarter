@@ -26,6 +26,7 @@ import java.util.Map;
 import java.util.Set;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.AppInfo;
 import com.dlka.firestarter.tools.AppStarter;
 import com.dlka.firestarter.tools.SettingsProvider;

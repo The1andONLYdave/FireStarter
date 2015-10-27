@@ -29,6 +29,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.observer.ForeGroundService;
 import com.dlka.firestarter.tools.SettingsProvider;
 

@@ -22,6 +22,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.gui.AppActivity;
 import com.dlka.firestarter.gui.MainActivity;
 import com.dlka.firestarter.tools.AppStarter;

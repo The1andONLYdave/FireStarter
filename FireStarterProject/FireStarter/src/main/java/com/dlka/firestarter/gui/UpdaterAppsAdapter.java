@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.FireStarterUpdater;
 import com.dlka.firestarter.tools.KodiUpdater;
 import com.dlka.firestarter.tools.SettingsProvider;

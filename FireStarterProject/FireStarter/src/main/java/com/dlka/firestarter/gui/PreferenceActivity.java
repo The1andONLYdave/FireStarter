@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.observer.ForeGroundService;
 import com.dlka.firestarter.tools.AppInfo;
 import com.dlka.firestarter.tools.SettingsProvider;

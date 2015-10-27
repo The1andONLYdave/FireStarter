@@ -11,6 +11,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 //import com.dlka.firestarter.R;
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.Tools;
 
 /**

@@ -10,7 +10,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.dlka.firestarter.R;
 import com.dlka.firestarter.tools.AppInfo;
+
 
 /**
  * App Settings Overlay for additional settings per app
