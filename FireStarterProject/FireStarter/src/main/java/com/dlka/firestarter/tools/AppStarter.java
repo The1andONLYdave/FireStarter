@@ -161,9 +161,11 @@ public class AppStarter {
             // If currently a watchdog thread is running, stop it first
             stopWatchThread();
             Log.d(AppStarter.class.getName(), "Starting launcher activity of package screensaver");
-            String url = "https://kulsch-it.blogspot.de/2015/10/sideloading-firetvfirestick.html";
-            Intent i = new Intent(Intent.ACTION_VIEW);
-            i.setData(Uri.parse(url));
+
+            Intent i = new Intent(Intent.ACTION_MAIN);
+            i.setComponent(ComponentName.unflattenFromString("com.fallentreegames.amazon.quellmemento/com.fallentreegames.amazon.quellmemento/.QuellMemento"));
+
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             mContext.startActivity(i);
 
 
