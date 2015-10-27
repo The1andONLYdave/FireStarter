@@ -35,6 +35,11 @@ public class BackgroundHomeButtonObserverThreadADB extends Thread {
     private OnHomeButtonClickedListener mHomeButtonClickedListener = null;
 
     /**
+     * Screensaver-listener
+     */
+    private OnScreensaverStartedListener mScreensaverStartedListener = null;
+
+    /**
      * ServiceError listener
      */
     private OnServiceErrorListener mOnServiceErrorListener = null;
@@ -200,6 +205,13 @@ public class BackgroundHomeButtonObserverThreadADB extends Thread {
      */
     public void setOnHomeButtonClickedListener(OnHomeButtonClickedListener listener) {
         mHomeButtonClickedListener = listener;
+    }
+
+    /**
+     * @param listener OnScreensaverStartedLister to be added
+     */
+    public void setOnScreensaverStartedListener(OnScreensaverStartedListener listener) {
+        mScreensaverStartedListener = listener;
     }
 
     /**
@@ -513,6 +525,37 @@ public class BackgroundHomeButtonObserverThreadADB extends Thread {
                                 mSecondClickInTime = false;
                             }
                         }
+                        else if (message.startsWith("I/ActivityManager") && message.contains("act=com.amazon.device.settings.action.SCREENSAVERS cmp=com.amazon.bueller.photos/.activity.SlideShowActivity")) {
+                            if (mWaitForSecondClickThread != null && mWaitForSecondClickThread.isAlive()) {
+                                // Signal second click
+                                mSecondClickInTime = true;
+                            } else {
+                                // For each first home-button click disable immediately the jumpback mechanism
+                                AppStarter.stopWatchThread();
+
+                                // Create new thread to check for double click
+                                mWaitForSecondClickThread = new Thread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        try {
+                                            Thread.sleep(mSettings.getDoubleClickInterval());
+                                            if (mSecondClickInTime) {
+                                                // Fire double click event
+                                                fireScreensaver2Event();
+                                            } else {
+                                                // Fire single click event
+                                                fireScreensaverEvent();
+                                            }
+                                            mSecondClickInTime = false;
+                                        } catch (InterruptedException ignore) {
+                                        }
+                                    }
+                                });
+                                mWaitForSecondClickThread.start();
+                                mSecondClickInTime = false;
+                            }
+                        }
+
                     }
                 } finally {
                     mReader.close();
@@ -706,6 +749,36 @@ public class BackgroundHomeButtonObserverThreadADB extends Thread {
             public void run() {
                 if (mHomeButtonClickedListener != null) {
                     mHomeButtonClickedListener.onHomeButtonDoubleClicked();
+                }
+            }
+        });
+        fireThread.start();
+    }
+
+    /**
+     * Fire Screensaver started to all registered listeners
+     */
+    private void fireScreensaverEvent() {
+        Thread fireThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (mScreensaverStartedListener != null) {
+                    mScreensaverStartedListener.onScreensaverStarted();
+                }
+            }
+        });
+        fireThread.start();
+    }
+
+    /**
+     * Fire Screensaver 2 started event to all registered listeners
+     */
+    private void fireScreensaver2Event() {
+        Thread fireThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                if (mScreensaverStartedListener != null) {
+                    mScreensaverStartedListener.onScreensaver2Started();
                 }
             }
         });

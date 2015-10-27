@@ -39,7 +39,7 @@
     <string name="update_hitcheckfor">Hit check for update to check for latest version.</string>
     <string name="autoselectfirsticon_desc">Auto select the first icon when switching to the app drawer (All Apps).</string>
     <string name="autoselectfirsricon_title">Auto select first icon (App Drawer)</string>
-    <string name="about_firestarter">FireStarter is a Non-Root Launcher Replacement / App-Drawer for Amazon FireTV:\n\nVisit discussion on XDA-Developers:\nhttp://forum.xda-developers.com/fire-tv/themes-apps/app-root-home-launcher-replacement-app-t3118135\n\nFireStarter is Open-Source, visit project on GitHub:\nhttps://github.com/sphinx02/FireStarter</string>
+    <string name="about_firestarter">This is a thankfully fork of the official FireStarter.\nvisit project on GitHub:\nhttps://github.com/The1andONLYdave/FireStarter\nOriginal Readme:\n\nFireStarter is a Non-Root Launcher Replacement / App-Drawer for Amazon FireTV:\n\nVisit discussion on XDA-Developers:\nhttp://forum.xda-developers.com/fire-tv/themes-apps/app-root-home-launcher-replacement-app-t3118135\n\nFireStarter is Open-Source, visit project on GitHub:\nhttps://github.com/sphinx02/FireStarter</string>
     <string name="jumpbackwatchdogtime_desc">The time window in milliseconds (between 0 - 10000) in which FireStarter prevents the amazon home launcher from coming to foreground when click-actions have been performed. Set to 0 to disable.</string>
     <string name="jumpbackwatchdogtime_title">Jump Back Watchdog Time</string>
     <string name="AmazonSettings">FireTV Settings</string>

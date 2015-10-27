@@ -79,7 +79,7 @@
 
   FireStarter is Open-Source, visit project on GitHub:
   https://github.com/sphinx02/FireStarter-->
-    <string name="about_firestarter">FireStarter - замена лаунчера / рабочий стол для Amazon Fire TV (не требует root):\n\nПосетите тему на XDA-Developers:\nhttp://forum.xda-developers.com/fire-tv/themes-apps/app-root-home-launcher-replacement-app-t3118135\n\nFireStarter является Open-Source, посетите проект на GitHub:\nhttps://github.com/sphinx02/FireStarter</string>
+    <string name="about_firestarter">This is a thankfully fork of the official FireStarter.\nvisit project on GitHub:\nhttps://github.com/The1andONLYdave/FireStarter\nOriginal Readme:\n\nFireStarter - замена лаунчера / рабочий стол для Amazon Fire TV (не требует root):\n\nПосетите тему на XDA-Developers:\nhttp://forum.xda-developers.com/fire-tv/themes-apps/app-root-home-launcher-replacement-app-t3118135\n\nFireStarter является Open-Source, посетите проект на GitHub:\nhttps://github.com/sphinx02/FireStarter</string>
     <!--Original value: The time window in milliseconds (between 0 - 10000) in which FireStarter prevents the amazon home launcher from coming to foreground when click-actions have been performed. Set to 0 to disable.-->
     <string name="jumpbackwatchdogtime_desc">Время в миллисекундах (в пределах 0 - 10000), в течение которого FireStarter предотвращает показ стартового экрана Amazon при выполнении клик-действий. Установите 0 для отключения.</string>
     <!--Original value: Jump Back Watchdog Time-->

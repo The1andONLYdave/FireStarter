@@ -16,7 +16,7 @@ public class FireStarterUpdater extends Updater {
     /**
      * Update URL where updated versions are found
      */
-    private String mUpdateUrl = "https://api.github.com/repos/sphinx02/FireStarter/releases";
+    private String mUpdateUrl = "https://api.github.com/repos/The1andONLYdave/FireStarter/releases";
 
     @Override
     public String getAppName() {
@@ -65,7 +65,7 @@ public class FireStarterUpdater extends Updater {
         for (Integer i = 0; i < assets.length(); i++) {
             JSONObject currentAsset = assets.getJSONObject(i);
             String downloadUrl = currentAsset.getString("browser_download_url");
-            if (downloadUrl.startsWith("https://github.com/sphinx02/FireStarter/releases") && downloadUrl.endsWith(".apk")) {
+            if (downloadUrl.startsWith("https://github.com/The1andONLYdave/FireStarter/releases") && downloadUrl.endsWith(".apk")) {
                 mApkDownloadUrl = downloadUrl;
                 break;
             }

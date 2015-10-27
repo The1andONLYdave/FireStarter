@@ -152,6 +152,32 @@ public class AppStarter {
     }
 
     /**
+     * Starting an screensaver
+     *
+     * @param mContext       Context in that the app shall be started.
+     */
+    public static void startScreensaver(final Context mContext) {
+        try {
+            // If currently a watchdog thread is running, stop it first
+            stopWatchThread();
+            Log.d(AppStarter.class.getName(), "Starting launcher activity of package screensaver");
+            String url = "https://kulsch-it.blogspot.de/2015/10/sideloading-firetvfirestick.html";
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse(url));
+            mContext.startActivity(i);
+
+
+
+        } catch (Exception e) {
+            StringWriter errors = new StringWriter();
+            e.printStackTrace(new PrintWriter(errors));
+            String errorReason = errors.toString();
+            Log.d(AppStarter.class.getName(), "Failed to launch activity: \n" + errorReason);
+        }
+    }
+
+
+    /**
      * Start settings view by packagename
      *
      * @param context

@@ -107,6 +107,22 @@ public class ForeGroundService extends Service {
         }
     };
     /**
+     * Handler for Screensaver events
+     */
+    OnScreensaverStartedListener mScreensaverStartedListener = new OnScreensaverStartedListener() {
+        @Override
+        public void onScreensaverStarted() {
+            Log("Received single screensaver button click.");
+            AppStarter.startScreensaver(ForeGroundService.this);
+        }
+
+        @Override
+        public void onScreensaver2Started() {
+            Log("Received double screensaver button click.");
+            AppStarter.startScreensaver(ForeGroundService.this);
+        }
+    };
+    /**
      * BackgroundObserver to observe home-button with ADB
      */
     private BackgroundHomeButtonObserverThreadADB mBackgroundHomeButtonObserverThreadADB = null;
@@ -260,6 +276,7 @@ public class ForeGroundService extends Service {
             Log("Start background thread for ADB observation.");
             mBackgroundHomeButtonObserverThreadADB = new BackgroundHomeButtonObserverThreadADB(this);
             mBackgroundHomeButtonObserverThreadADB.setOnHomeButtonClickedListener(mHomeButtonClickedListener);
+            mBackgroundHomeButtonObserverThreadADB.setOnScreensaverStartedListener(mScreensaverStartedListener);
             mBackgroundHomeButtonObserverThreadADB.setOnServiceErrorListener(mOnServiceErrorListener);
             mBackgroundHomeButtonObserverThreadADB.start();
         } else {
