@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
 
     <PreferenceCategory android:title="@string/layout_settings">
@@ -13,10 +12,10 @@
             android:title="@string/language_title" />
 
         <EditTextPreference
-            android:inputType="number"
-            android:numeric="integer"
             android:digits="0123456789"
+            android:inputType="number"
             android:key="prefAppIconSize"
+            android:numeric="integer"
             android:summary="@string/appicon_size_summary"
             android:title="@string/appicon_size_title" />
 
@@ -67,22 +66,19 @@
             android:defaultValue="true"
             android:key="prefBackgroundObservationEnabled"
             android:summary="@string/enable_background_observation_desc"
-            android:title="@string/enable_background_observation_title" >
-        </CheckBoxPreference>
+            android:title="@string/enable_background_observation_title"></CheckBoxPreference>
 
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefBackgroundObservationFallBackToNonAdb"
             android:summary="@string/fallback_to_nonadb_desc"
-            android:title="@string/fallback_to_nonadb_title" >
-        </CheckBoxPreference>
+            android:title="@string/fallback_to_nonadb_title"></CheckBoxPreference>
 
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="prefBackgroundObservationViaAdb"
             android:summary="@string/background_observation_viaadb_desc"
-            android:title="@string/background_observation_viaadb_title" >
-        </CheckBoxPreference>
+            android:title="@string/background_observation_viaadb_title"></CheckBoxPreference>
 
         <Preference
             android:key="prefVirtualOpenAdbSettings"
@@ -115,28 +111,28 @@
             android:key="prefClearPreviousInstancesForDoubleClick"
             android:summary="@string/clearpreviousinstance_desc"
             android:title="@string/clearpreviousinstance_doubleclick_title" />
-     </PreferenceCategory>
+    </PreferenceCategory>
 
 
-     <PreferenceCategory android:title="@string/settings_timings">
+    <PreferenceCategory android:title="@string/settings_timings">
 
-         <EditTextPreference
-             android:inputType="number"
-             android:numeric="integer"
-             android:digits="0123456789"
-             android:key="prefClickInterval"
-             android:summary="@string/doubleclick_interval_desc"
-             android:title="@string/doubleclick_interval_title" />
+        <EditTextPreference
+            android:digits="0123456789"
+            android:inputType="number"
+            android:key="prefClickInterval"
+            android:numeric="integer"
+            android:summary="@string/doubleclick_interval_desc"
+            android:title="@string/doubleclick_interval_title" />
 
-         <EditTextPreference
-             android:inputType="number"
-             android:numeric="integer"
-             android:digits="0123456789"
-             android:key="prefJumpbackWatchdogTime"
-             android:summary="@string/jumpbackwatchdogtime_desc"
-             android:title="@string/jumpbackwatchdogtime_title" />
+        <EditTextPreference
+            android:digits="0123456789"
+            android:inputType="number"
+            android:key="prefJumpbackWatchdogTime"
+            android:numeric="integer"
+            android:summary="@string/jumpbackwatchdogtime_desc"
+            android:title="@string/jumpbackwatchdogtime_title" />
 
-     </PreferenceCategory>
+    </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/importExport">
 

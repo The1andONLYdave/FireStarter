@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="fill_parent"
-    android:layout_width="fill_parent">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
     <PreferenceCategory android:title="@string/system_informative">
 
@@ -36,10 +35,10 @@
     <PreferenceCategory android:title="@string/system_settings">
 
         <EditTextPreference
-            android:inputType="number"
-            android:numeric="integer"
             android:digits="0123456789"
+            android:inputType="number"
             android:key="prefVirtualSleepTime"
+            android:numeric="integer"
             android:summary="@string/system_sleeptime_edit_summary"
             android:title="@string/system_sleeptime_edit_title" />
 

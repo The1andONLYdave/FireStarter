@@ -1,104 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              android:orientation="vertical"
-              android:background="@drawable/mainbackground"
-              android:id="@+id/linearLayoutMain">
+    android:id="@+id/linearLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbackground"
+    android:orientation="vertical">
 
     <LinearLayout
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-                  android:id="@+id/linearLayoutSemiTransparentBackground">
+        android:id="@+id/linearLayoutSemiTransparentBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/imageLabel"
-                    android:scaleType="fitCenter"
-                    android:src="@mipmap/firestarter_logo_only_white_middle"
-                    android:layout_width="34dp"
-                    android:layout_height="34dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginRight="7dp"
-                    android:layout_gravity="center_vertical"
-                    android:contentDescription="@string/AppName"/>
+            <ImageView
+                android:id="@+id/imageLabel"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="7dp"
+                android:layout_marginTop="3dp"
+                android:contentDescription="@string/AppName"
+                android:scaleType="fitCenter"
+                android:src="@mipmap/firestarter_logo_only_white_middle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginTop="13dp"
+                android:autoText="true"
+                android:focusable="false"
+                android:text="@string/AppName"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/textViewClock"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="top"
-                    android:layout_marginTop="13dp"
-                    android:textSize="17dp"
-                    android:textColor="#FFFFFF"
-                    android:text="@string/AppName"
+                    android:layout_gravity="right"
                     android:autoText="true"
                     android:focusable="false"
+                    android:text="00:00"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18dp"
                     android:textStyle="bold" />
 
-                <LinearLayout
-                    android:layout_width="fill_parent"
+                <TextView
+                    android:id="@+id/textViewDate"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="15dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textViewClock"
-                        android:layout_gravity="right"
-                        android:textSize="18dp"
-                        android:textColor="#FFFFFF"
-                        android:text="00:00"
-                        android:autoText="true"
-                        android:focusable="false"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/textViewDate"
-                        android:layout_gravity="right"
-                        android:textSize="13dp"
-                        android:textColor="#FFFFFF"
-                        android:text="Mo, 1. Jan 2015"
-                        android:autoText="true"
-                        android:focusable="false"
-                        android:textStyle="bold" />
-
-                    </LinearLayout>
+                    android:layout_gravity="right"
+                    android:autoText="true"
+                    android:focusable="false"
+                    android:text="Mo, 1. Jan 2015"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
+        </LinearLayout>
+
         <LinearLayout
-              android:layout_width="match_parent"
-              android:layout_height="fill_parent"
-              android:layout_weight="1"
-              android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/leftbar"
-                android:orientation="vertical"
                 android:layout_width="@dimen/leftbarwidth"
                 android:layout_height="match_parent"
-                android:paddingRight="20dp"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingRight="20dp">
 
                 <ListView
                     android:id="@+id/listView"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:paddingTop="90dp"
                     android:layout_weight="1"
-                    android:dividerHeight="0dp"
                     android:divider="#00000000"
-                    android:listSelector="@drawable/itemselector" />
+                    android:dividerHeight="0dp"
+                    android:listSelector="@drawable/itemselector"
+                    android:paddingTop="90dp" />
 
             </LinearLayout>
 
@@ -107,10 +106,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:paddingTop="6dp"
                 android:paddingBottom="20dp"
+                android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:paddingLeft="20dp"/>
+                android:paddingTop="6dp" />
 
         </LinearLayout>
     </LinearLayout>

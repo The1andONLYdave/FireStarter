@@ -11,7 +11,7 @@
     </item>
 
     <item android:state_pressed="true">
-        <shape >
+        <shape>
             <solid android:color="@color/appselectorhighlight" />
         </shape>
     </item>
